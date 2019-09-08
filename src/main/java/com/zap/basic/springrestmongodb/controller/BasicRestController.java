@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class BasicRestController {
 
     @GetMapping("/{id}")
-    public @ResponseBody ResponseEntity<Integer> getBook(@PathVariable int id) {
+    public @ResponseBody ResponseEntity<String> getBook(@PathVariable int id) {
         System.out.println("received: " + id);
-        return ResponseEntity.ok(id);
+        return ResponseEntity.ok("Scemo chi legge");
     }
 }
