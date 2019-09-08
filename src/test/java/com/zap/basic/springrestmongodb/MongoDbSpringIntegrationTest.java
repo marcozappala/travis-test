@@ -21,14 +21,14 @@ public class MongoDbSpringIntegrationTest {
     @Test
     public void test() {
         // given
-        DBObject objectToSave = BasicDBObjectBuilder.start().add("key", "value").get();
-
-        // when
-        mongoTemplate.save(objectToSave, "collection");
-
-        mongoTemplate.findAll(DBObject.class, "collection").toString();
-
-        // then
-        assertThat(mongoTemplate.findAll(DBObject.class, "collection").get(0)).extracting("key").containsOnly("value");
+//        DBObject objectToSave = BasicDBObjectBuilder.start().add("key", "value").get();
+//
+//        // when
+//        mongoTemplate.save(objectToSave, "collection");
+//
+//        mongoTemplate.findAll(DBObject.class, "collection").toString();
+//
+//        // then
+//        assertThat(mongoTemplate.findAll(DBObject.class, "collection").get(0)).extracting("key").containsOnly("value");
     }
 }
