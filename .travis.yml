@@ -1,2 +1,12 @@
 language: java
 jdk: openjdk11
+jobs:
+  include:
+    - stage: deploy to development
+      script: skip
+      deploy: &heroku
+        provider: heroku
+        app: zappapp
+        api_key: $HEROKU_AUTH_TOKEN
+    - stage: test development
+      script: 'curl http://zappapp.herokuapp.com'
